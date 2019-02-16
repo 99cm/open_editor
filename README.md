@@ -1,35 +1,17 @@
-# Spree Editor
+# Open Editor
 
-[![Build Status](https://travis-ci.org/spree-contrib/spree_editor.svg?branch=master)](https://travis-ci.org/spree-contrib/spree_editor)
-[![Code Climate](https://codeclimate.com/github/spree-contrib/spree_editor/badges/gpa.svg)](https://codeclimate.com/github/spree-contrib/spree_editor)
+This extension provides an inline rich-text editor for Open. It implements a rich text editor like [TinyMCE][1].
 
-This extension provides an inline rich-text editor for Spree. It implements different types of editors:
+Please note that this extension is just a simple integration of some pretty complex gem: [`tinymce-rails`][2], if you have issues, please check their issues trackers first.
 
-- [CKEditor][1]
-- [TinyMCE][2]
-
-Please note that this extension is just a simple integration of some pretty complex gems: [`ckeditor`][9] and [`tinymce-rails`][10].
-
-If you have issues, please check their issues trackers first.
+It's best to use with [Open Essential Content][3]. 
 
 ---
 
-1. Add this extension to your Gemfile with this line:
-
-  #### Spree >= 3.1
-
+1. Add Open Editor gem to your Gemfile with this line:
   ```ruby
-  gem 'spree_editor', github: 'spree-contrib/spree_editor'
+  gem 'open_editor', github: '99cm/open_editor', branch: 'master'
   ```
-
-  #### Spree 3.0 and Spree 2.x
-
-  ```ruby
-  gem 'spree_editor', github: 'spree-contrib/spree_editor', branch: 'X-X-stable'
-  ```
-
-  The `branch` option is important: it must match the version of Spree you're using.
-  For example, use `3-0-stable` if you're using Spree `3-0-stable` or any `3.0.x` version.
 
 2. Install the gem using Bundler:
   ```ruby
@@ -38,25 +20,10 @@ If you have issues, please check their issues trackers first.
 
 3. Copy & run migrations
   ```ruby
-  bundle exec rails g spree_editor:install
+  bundle exec rails g open_editor:install
   ```
 
-4. If using CKEditor, and would like to enable file uploads run the ckeditor generator:
-  ```sh
-  $ rails g ckeditor:install --orm=active_record --backend=paperclip && rake db:migrate
-  ```
-
-5. In order to secure your file uploads to only be accessed by admins you will also need to configure config/initializers/ckeditor.rb:
-  ```ruby
-  config.authorize_with :cancan, Spree::Ability
-  ```
-
-6. In order to precompile CKEditor's generated assets, you will need to add a line in config/initializers/assets.rb:
-  ```ruby
-  Rails.application.config.assets.precompile += %w( ckeditor/*)
-  ```
-
-7. Restart your server
+4. Restart your server
 
   If your server was running, restart it so that it can find the assets properly.
 
@@ -101,21 +68,11 @@ TinyMCE will not be loaded unless it finds a language package matching your `Spr
 
 ---
 
-## Contributing
+Copyright (c) 2019 [Leo Wang][4] and other [contributors][5], released under the [New BSD License][6]
 
-See corresponding [guidelines][8]
-
----
-
-Copyright (c) 2010-2015 [divineforest][5] and other [contributors][6], released under the [New BSD License][7]
-
-[1]: http://ckeditor.com
-[2]: http://www.tinymce.com
-[3]: http://www.fsf.org/licensing/essays/free-sw.html
-[4]: https://github.com/spree-contrib/spree_editor/issues
-[5]: https://github.com/divineforest
-[6]: https://github.com/spree-contrib/spree_editor/graphs/contributors
-[7]: https://github.com/spree-contrib/spree_editor/blob/master/LICENSE.md
-[8]: https://github.com/spree-contrib/spree_editor/blob/master/CONTRIBUTING.md
-[9]: https://github.com/galetahub/ckeditor
-[10]: https://github.com/spohlenz/tinymce-rails
+[1]: http://www.tinymce.com
+[2]: https://github.com/spohlenz/tinymce-rails
+[3]: https://github.com/99cm/open_essential-content
+[4]: https://github.com/99cm
+[5]: https://github.com/99cm/open_editor/graphs/contributors
+[6]: https://github.com/99cm/open_editor/blob/master/LICENSE.md

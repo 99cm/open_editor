@@ -1,4 +1,4 @@
-<% @editor_setting = Spree::EditorSetting.new %>
+<% @editor_setting = SpreeEditor::Config %>
 <% is_enabled = @editor_setting[:enabled] %>
 <% current_editor = @editor_setting[:current_editor] %>
 <% ids = @editor_setting[:ids].split %>

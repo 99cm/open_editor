@@ -1,0 +1,6 @@
+require 'open_core'
+require 'open_backend'
+require 'open_editor/version'
+require 'spree_editor/config'
+require 'open_editor/engine'
+require 'tinymce-rails'

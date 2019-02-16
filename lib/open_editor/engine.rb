@@ -1,9 +1,9 @@
-module SpreeEditor
+module OpenEditor
   class Engine < Rails::Engine
     isolate_namespace Spree
-    engine_name 'spree_editor'
+    engine_name 'open_editor'
 
-    initializer 'spree_editor.preferences', before: :load_config_initializers do
+    initializer 'open_editor.preferences', before: :load_config_initializers do
       SpreeEditor::Config = Spree::EditorSetting.new
 
       if Spree::Config.has_preference? :show_raw_product_description

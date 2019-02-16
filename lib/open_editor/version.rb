@@ -1,4 +1,4 @@
-module SpreeEditor
+module OpenEditor
   module_function
 
   # Returns the version of the currently loaded SpreeEditor as a
@@ -8,9 +8,10 @@ module SpreeEditor
   end
 
   module VERSION
-    MAJOR = 3
-    MINOR = 3
+    MAJOR = 2
+    MINOR = 2
     TINY  = 2
+    PRE   = nil
 
     STRING = [MAJOR, MINOR, TINY].compact.join('.')
   end
