@@ -72,7 +72,7 @@ Copyright (c) 2019 [Leo Wang][4] and other [contributors][5], released under the
 
 [1]: http://www.tinymce.com
 [2]: https://github.com/spohlenz/tinymce-rails
-[3]: https://github.com/99cm/open_essential-content
+[3]: https://github.com/99cm/open_essential_content
 [4]: https://github.com/99cm
 [5]: https://github.com/99cm/open_editor/graphs/contributors
 [6]: https://github.com/99cm/open_editor/blob/master/LICENSE.md
